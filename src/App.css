@@ -1,28 +1,29 @@
-body{
+body {
   background-color: #eee;
 }
 
-.App{
+.App {
   padding: 30px;
   box-sizing: border-box;
 }
 
-.header{
-  width: 95%;
+.header {
+  width: 100%;
   background-color: rgb(187, 187, 187);
   padding: 40px;
   box-sizing: border-box;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.arama_kutusu{
+.arama_kutusu {
   width: 80%;
   height: 50px;
   margin: 0 auto;
   position: relative;
 }
 
-.arama_kutusu input{
+.arama_kutusu input {
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -34,37 +35,34 @@ body{
   outline: none;
 }
 
-.arama_kutusu button{
-  width: 75px;
-  height: 50px;
-  background-color: rgb(13, 105, 211);
-  color: white;
-  border-radius: 8px;
-  border-color: rgb(13, 105, 211);
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  outline: none;
-  border: 0;
-}
 
-.ilan{
-  border: 1px solid #ccc;
+.ilan {
   padding: 16px;
   margin: 16px 0px;
+  background: #92454518;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
 }
 
-.ilan img{
+.ilan img {
   max-width: 100%;
   height: auto;
 }
 
-.ilan-baslik{
+.ilan-baslik {
   font-size: 1.5em;
   margin-bottom: 8px;
 }
 
-.ilan-lokasyon, .ilan-kategori{
+.ilan-lokasyon,
+.ilan-kategori {
   font-style: italic;
   color: #555;
+}
+
+.ilan-listesi{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

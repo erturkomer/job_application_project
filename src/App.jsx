@@ -1,24 +1,34 @@
-import { useState } from 'react'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
 import IlanList from '../components/IlanList.jsx';
 
 function App() {
+    const [searchQuery, setSearchQuery] = useState('');
 
-  return (
-    <div className="App">
-      <h1>İş İlan Portalı</h1>
-      <div className="header">
+    const handleSearchChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
 
-        <div className="arama_kutusu">
-          <input type="text" placeholder="İş İlanı Arayın" />
-          <button id="arama_butonu">Ara</button>
+    const handleSearchClick = () => {
+    };
+
+    return (
+        <div className="App">
+            <h1>İş İlan Portalı</h1>
+            <div className="header">
+                <div className="arama_kutusu">
+                    <input
+                        type="text"
+                        placeholder="İş İlanı Arayın"
+                        value={searchQuery}
+                        onChange={handleSearchChange}
+                    />
+                </div>
+            </div>
+
+            <IlanList searchQuery={searchQuery} />
         </div>
-
-      </div>
-
-      <IlanList />
-    </div>
-  )
+    );
 }
 
-export default App
+export default App;

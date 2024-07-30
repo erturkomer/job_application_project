@@ -1,5 +1,6 @@
-import React from "react";
+import React from 'react';
 
+// Örnek iş ilanı verileri
 const is_ilanlari_veriler = [
     {
         "job_title": "Tam Yığın Geliştirici",
@@ -71,7 +72,6 @@ const is_ilanlari_veriler = [
         "location": "Samsun, Türkiye",
         "category": "DevOps"
       }
-
 ];
 
 const IlanKartlari = ({ ilan }) => {
@@ -86,12 +86,20 @@ const IlanKartlari = ({ ilan }) => {
     );
 };
 
-const IlanList = () => {
+const IlanList = ({ searchQuery }) => {
+    const filteredListings = is_ilanlari_veriler.filter(ilan =>
+        ilan.job_title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
         <div className="ilan-listesi">
-            {is_ilanlari_veriler.map((is_ilanlari_veri, index) => (
-                <IlanKartlari key={index} ilan={is_ilanlari_veri} />
-            ))}
+            {filteredListings.length > 0 ? (
+                filteredListings.map((is_ilanlari_veri, index) => (
+                    <IlanKartlari key={index} ilan={is_ilanlari_veri} />
+                ))
+            ) : (
+                <p>Sonuç bulunamadı.</p>
+            )}
         </div>
     );
 };
