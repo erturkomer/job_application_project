@@ -1,8 +1,17 @@
-# React + Vite
+# İş İlan Portalı
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, Türkiye'deki iş ilanlarını listelemek ve kullanıcıların bu ilanları görüntülemesini sağlamak amacıyla geliştirilmiş bir web uygulamasıdır.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **İş ilanlarını listeleme:** Kullanıcılar iş ilanlarını görüntüleyebilir.
+- **İş ilanlarını filtreleme:** Kullanıcılar iş ilanlarını kategori ve konuma göre filtreleyebilirler.
+
+## Kullanılan Teknolojiler
+
+### Frontend
+
+- **React:** Kullanıcı arayüzü bileşenlerini oluşturmak için.
+- **React Router:** Sayfalar arası geçişleri yönetmek için.
+
+## Proje Linki
