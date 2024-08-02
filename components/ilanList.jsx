@@ -96,16 +96,18 @@ const IlanKartlari = ({ ilan }) => {
   );
 };
 
-const IlanList = ({ searchQuery }) => {
+const IlanList = ({ searchQuery, selectedLocation, selectedCategory }) => {
   const filteredListings = is_ilanlari_veriler.filter(ilan =>
-      ilan.job_title.toLowerCase().includes(searchQuery.toLowerCase())
+      ilan.job_title.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      (selectedLocation ? ilan.location === selectedLocation : true) &&
+      (selectedCategory ? ilan.category === selectedCategory : true)
   );
 
   return (
       <div className="ilan-listesi">
           {filteredListings.length > 0 ? (
-              filteredListings.map((is_ilanlari_veri, index) => (
-                  <IlanKartlari key={index} ilan={is_ilanlari_veri} />
+              filteredListings.map((ilan, index) => (
+                  <IlanKartlari key={index} ilan={ilan} />
               ))
           ) : (
               <p>Sonuç bulunamadı.</p>
